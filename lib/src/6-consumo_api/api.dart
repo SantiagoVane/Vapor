@@ -30,8 +30,7 @@ class _ApiState extends State<Api> {
 
   Future<List<Pokemon>> fetchPokemonList() async {
     final response = await http
-        .get(Uri.parse(
-            'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json'))
+        .get(Uri.parse('https://pokeapi.co/api/v2/pokemon'))
         .timeout(const Duration(seconds: 5));
 
     if (response.statusCode == 200) {
